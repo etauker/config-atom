@@ -1,0 +1,25 @@
+"*":
+  core:
+    customFileTypes:
+      "source.js": [
+        "xsaccess"
+        "xsjs"
+        "xsjslib"
+        "xsprivileges"
+        "hdbti"
+      ]
+      "source.sql": [
+        "hdbview"
+      ]
+    telemetryConsent: "no"
+    uriHandlerRegistration: "always"
+  editor:
+    tabLength: 4
+  "exception-reporting":
+    userId: "3e45284b-e33b-4280-9b54-744b10ce3e41"
+  github: {}
+  linter: {}
+  "linter-ui-default":
+    panelHeight: 318
+  welcome:
+    showOnStartup: false

@@ -1,0 +1,90 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#configuring-with-cson
+
+
+
+# Windows/Linux Settings
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+  'ctrl-m': 'markdown-preview:toggle'
+  'ctrl-shift-d': 'user:insert-date'
+  'ctrl-shift-j': 'pretty-json:prettify'
+  'ctrl-alt-j': 'user:csv-to-json'
+  'ctrl-alt-c': 'user:json-to-csv'
+  'ctrl-shift-l': 'editor:split-selections-into-lines'
+  'ctrl-alt-u': 'user:uuid'
+  # 'ctrl-l': 'user:uuid'
+
+'.platform-win32 .tree-view, .platform-linux .tree-view':
+  'ctrl-k ctrl-w': 'tree-view:open-selected-entry-up'
+  'ctrl-k ctrl-s': 'tree-view:open-selected-entry-down'
+  'ctrl-k ctrl-a': 'tree-view:open-selected-entry-left'
+  'ctrl-k ctrl-d': 'tree-view:open-selected-entry-right'
+
+'.platform-win32 atom-workspace atom-text-editor:not([mini])':
+  'ctrl-up': 'editor:move-line-up'
+  'ctrl-down': 'editor:move-line-down'
+  'ctrl-shift-g': 'github:toggle-git-tab'
+
+'.platform-win32 body':
+  'ctrl-shift-T': 'pane:reopen-closed-item'
+
+'.platform-win32':
+  'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+
+
+# MacOS Settings
+'.platform-darwin atom-text-editor':
+  'cmd-m': 'markdown-preview:toggle'
+  'cmd-shift-d': 'user:insert-date'
+  'cmd-shift-j': 'pretty-json:prettify'
+  'cmd-alt-j': 'user:csv-to-json'
+  'cmd-alt-c': 'user:json-to-csv'
+  'cmd-shift-l': 'editor:split-selections-into-lines'
+  'cmd-alt-u': 'user:uuid'
+
+'.platform-darwin .tree-view':
+  'cmd-k cmd-w': 'tree-view:open-selected-entry-up'
+  'cmd-k cmd-s': 'tree-view:open-selected-entry-down'
+  'cmd-k cmd-a': 'tree-view:open-selected-entry-left'
+  'cmd-k cmd-d': 'tree-view:open-selected-entry-right'
+
+'.platform-darwin atom-workspace atom-text-editor:not([mini])':
+  'cmd-up': 'editor:move-line-up'
+  'cmd-down': 'editor:move-line-down'
+  'cmd-shift-g': 'github:toggle-git-tab'
+
+'.platform-darwin body':
+  'cmd-shift-T': 'pane:reopen-closed-item'
+
+'.platform-darwin':
+  'cmd-t': 'fuzzy-finder:toggle-file-finder'
