@@ -15,10 +15,11 @@ if [[ $@ = *"-h"* || $@ = *"--help"* ]]; then
     echo -e "   ${YELLOW}   -h, --help ${RESET}     Prints this message."
     echo -e "   ${YELLOW}   -c, --commit ${RESET}   Commits the files after a backup."
     echo -e "   ${YELLOW}   -p, --push ${RESET}     Pushes the files after a backup. Only works if -c option is also given."
+    echo -e "   ${RESET}"
 fi
 
 # Begin backup
-if [[ $@ != *"-h"* ]]; then
+if [[ $@ != *"-h"* && $@ != *"--help"* ]]; then
     echo -e "${YELLOW}Atom configuration backup in progress...${RESET}"
 
     # Script variables
