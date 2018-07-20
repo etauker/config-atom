@@ -21,5 +21,13 @@
   linter: {}
   "linter-ui-default":
     panelHeight: 318
+  "platformio-ide-terminal":
+    core:
+      shell: "C:\\tools\\Git\\bin\\bash.exe"
+    style: {}
+    toggles:
+      autoClose: true
+      cursorBlink: false
+      selectToCopy: false
   welcome:
     showOnStartup: false
