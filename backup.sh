@@ -24,28 +24,34 @@ if [[ $@ != *"-h"* && $@ != *"--help"* ]]; then
 
     # Script variables
     configDir="~/.atom"
+    backupDir="./content"
     currentDate=`date '+%d-%m-%Y %H:%M'`
     commitMessage="Configuration backup on $currentDate"
     remote="origin"
     branch="master"
 
+
+    # Create directories
+    echo "-- Creating backup directory"
+    eval "mkdir -p ${backupDir}/atom"
+
     # Make a list of installed packages
     echo "-- Exporting installed package list"
-    apm list --installed --bare > packages.list
+    eval "apm list --installed --bare > ${backupDir}/packages.list"
 
     # Copy config files from ~/.atom
     echo "-- Backing up ${configDir}/config.cson"
-    eval "cp ${configDir}/config.cson ./atom/config.cson"
+    eval "cp ${configDir}/config.cson ${backupDir}/atom/config.cson"
     echo "-- Backing up ${configDir}/helpers.js"
-    eval "cp ${configDir}/helpers.js ./atom/helpers.js"
+    eval "cp ${configDir}/helpers.js ${backupDir}/atom/helpers.js"
     echo "-- Backing up ${configDir}/init.coffee"
-    eval "cp ${configDir}/init.coffee ./atom/init.coffee"
+    eval "cp ${configDir}/init.coffee ${backupDir}/atom/init.coffee"
     echo "-- Backing up ${configDir}/keymap.cson"
-    eval "cp ${configDir}/keymap.cson ./atom/keymap.cson"
+    eval "cp ${configDir}/keymap.cson ${backupDir}/atom/keymap.cson"
     echo "-- Backing up ${configDir}/snippets.cson"
-    eval "cp ${configDir}/snippets.cson ./atom/snippets.cson"
+    eval "cp ${configDir}/snippets.cson ${backupDir}/atom/snippets.cson"
     echo "-- Backing up ${configDir}/styles.less"
-    eval "cp ${configDir}/styles.less ./atom/styles.less"
+    eval "cp ${configDir}/styles.less ${backupDir}/atom/styles.less"
 
     echo -e "${GREEN}Atom configuration backup complete.${RESET}"
 fi
@@ -53,14 +59,14 @@ fi
 # Commit the changes made to source control
 if [[ $@ = *"-c"* || $@ = *"--commit"* ]]; then
     echo -e "${YELLOW}Committing to source control...${RESET}"
-    git add ./
-    git commit -m "$commitMessage"
+    eval "git add ${backupDir}"
+    eval "git commit -m \"$commitMessage\""
     echo -e "${GREEN}Committed with message: $commitMessage ${RESET}"
 
     # Push changes to a remote
     if [[ $@ = *"-p"* || $@ = *"--push"* ]]; then
         echo -e "${YELLOW}Pushing to remote...${RESET}"
-        git push ${remote} ${branch}
+        eval "git push ${remote} ${branch}"
         echo -e "${GREEN}Pushed to ${remote} ${branch}.${RESET}"
     fi
 fi
