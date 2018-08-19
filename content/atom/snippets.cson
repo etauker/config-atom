@@ -22,6 +22,7 @@
 
 # Remove empty lines:   ^\s*\r?\n\r?
 
+# ===== Work =====
 '.source.gfm':
   'SPORTSONEIBSO':
     'prefix': 'ib'
@@ -47,3 +48,4 @@
     https://sapjira.wdf.sap.corp/browse/SPORTSONEIBSO-$1
     ${3:Details of work done}
     """
+# ===== /Work =====
