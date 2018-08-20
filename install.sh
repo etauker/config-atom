@@ -14,6 +14,7 @@ if [[ $@ = *"-h"* || $@ = *"--help"* ]]; then
     echo -e "   ${RESET}"
 
     echo -e "   ${YELLOW}   -h, --help ${RESET}    Prints this message."
+    echo -e "   ${RESET}"
 
     echo -e "   ${YELLOW}   --os ${RESET}   The operating system of the computer on which to install atom."
     echo -e "               Accepted options: "
@@ -23,7 +24,7 @@ if [[ $@ = *"-h"* || $@ = *"--help"* ]]; then
     echo -e "                  --os=MacOS [WIP]"
     echo -e "   ${RESET}"
 
-    # Windows (or no os option provided)
+# Windows (or no os option provided)
 elif [[ $@ = *"--os=Windows"* || $@ != *"--os="* ]]; then
     echo -e "${RED}Atom installation on Windows is currently not supported.${RESET}"
 
