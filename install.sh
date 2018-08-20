@@ -42,7 +42,7 @@ elif [[ $@ = *"--os=Debian"* || $@ = *"--os=Ubuntu"* ]]; then
     echo -e "${GREEN}Atom download complete.${RESET}"
 
     echo -e "${YELLOW}Atom installation in progress...${RESET}"
-    eval "sudo apt-get install atom"
+    eval "sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install atom"
     echo -e "${GREEN}Atom installation complete.${RESET}"
 
 # MacOS
