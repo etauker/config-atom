@@ -36,13 +36,13 @@ elif [[ $@ = *"--os=Windows"* || $@ != *"--os="* ]]; then
 # Debian or Ubuntu
 elif [[ $@ = *"--os=Debian"* || $@ = *"--os=Ubuntu"* ]]; then
     echo -e "${YELLOW}Atom download in progress...${RESET}"
-    # eval "curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -"
-    # eval "sudo sh -c 'echo \"deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main\" > /etc/apt/sources.list.d/atom.list'"
-    # eval "sudo apt-get update"
+    eval "curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -"
+    eval "sudo sh -c 'echo \"deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main\" > /etc/apt/sources.list.d/atom.list'"
+    eval "sudo apt-get update"
     echo -e "${GREEN}Atom download complete.${RESET}"
 
     echo -e "${YELLOW}Atom installation in progress...${RESET}"
-    # eval "sudo apt-get install atom"
+    eval "sudo apt-get install atom"
     echo -e "${GREEN}Atom installation complete.${RESET}"
 
 # MacOS
