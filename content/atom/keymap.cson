@@ -50,15 +50,15 @@
   'ctrl-k ctrl-a': 'tree-view:open-selected-entry-left'
   'ctrl-k ctrl-d': 'tree-view:open-selected-entry-right'
 
-'.platform-win32 atom-workspace atom-text-editor:not([mini]), .platform-linux atom-workspace atom-text-editor:not([mini])':
+'.platform-win32 atom-workspace atom-text-editor:not([mini])':
   'ctrl-up': 'editor:move-line-up'
   'ctrl-down': 'editor:move-line-down'
   'ctrl-shift-g': 'github:toggle-git-tab'
 
-'.platform-win32 body, .platform-linux body':
+'.platform-win32 body':
   'ctrl-shift-T': 'pane:reopen-closed-item'
 
-'.platform-win32, .platform-linux':
+'.platform-win32':
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
 
 
