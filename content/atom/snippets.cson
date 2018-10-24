@@ -22,30 +22,42 @@
 
 # Remove empty lines:   ^\s*\r?\n\r?
 
-# ===== Work =====
 '.source.gfm':
   'SPORTSONEIBSO':
-    'prefix': 'ib'
+    'prefix': 'sp'
     'body': 'SPORTSONEIBSO-$1'
 
 '.text.git-commit':
-  'commit-message':
-    'prefix': 'com'
+  'commit-message-rugby':
+    'prefix': 'rcom'
     'body': """SPORTSONEIBSO-$1: ${2:Work summary}
 
     https://sapjira.wdf.sap.corp/browse/SPORTSONEIBSO-$1
     ${3:Details of work done}
     """
+
+    'commit-message-nord':
+        'prefix': 'ncom'
+        'body': """NORD-$1: ${2:Work summary}
+
+        https://jira.itc.sap.com/browse/NORD-$1
+        ${3:Details of work done}
+        """
 
 # .text.plain.null-grammar is used where grammar is not set,
 # including the commit message box in git tab
 '.text.plain.null-grammar':
-  'commit-message':
-    'prefix': 'com'
+  'commit-message-rugby':
+    'prefix': 'rcom'
     'body': """SPORTSONEIBSO-$1: ${2:Work summary}
-    # ================================================| ====================|
 
     https://sapjira.wdf.sap.corp/browse/SPORTSONEIBSO-$1
     ${3:Details of work done}
     """
-# ===== /Work =====
+  'commit-message-nord':
+    'prefix': 'ncom'
+    'body': """NORD-$1: ${2:Work summary}
+
+    https://jira.itc.sap.com/browse/NORD-$1
+    ${3:Details of work done}
+    """

@@ -80,5 +80,5 @@ atom.commands.add 'atom-text-editor',
 atom.contextMenu.add {
      # '.tree-view .file .name[data-name$=\\.csv]': [{label: 'View as JSON', command: 'user:view-csv-as-json'}]
      # '.tree-view .file .name[data-name$=\\.csv]': [{label: 'View as JSON', command: 'user:csv-to-json'}]
-     'atom-text-editor': [{label: 'View as JSON', command: 'user:csv-to-json'}]
+     'atom-text-editor': [{label: 'View as JSON', command: 'user:csv-to-json'}, {label: 'List', command: 'atom-shell-commands:list'}]
  }
