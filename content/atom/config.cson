@@ -1,4 +1,10 @@
 "*":
+  "atom-ide-ui":
+    "debugger-exceptionBreakpointsCollapsed": false
+  "atom-package-deps":
+    ignored: [
+      "linter"
+    ]
   core:
     customFileTypes:
       "source.js": [
@@ -11,20 +17,42 @@
       "source.sql": [
         "hdbview"
       ]
-    telemetryConsent: "no"
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
+    disabledPackages: [
+      "busy-signal"
+      "platformio-ide-terminal"
+      "split-diff"
+      "guid-me"
+      "linter-ui-default"
+      "pigments"
+      "language-swift"
+      "minimap-split-diff"
+      "linter"
+      "ide-java"
+      "ide-go"
+      "ide-yaml"
     ]
+    telemetryConsent: "no"
     uriHandlerRegistration: "always"
   editor:
-    fontSize: 12
+    fontSize: 15
   "exception-reporting":
     userId: "3e45284b-e33b-4280-9b54-744b10ce3e41"
+  "fuzzy-finder":
+    ignoredNames: [
+      "**/node_modules/"
+    ]
   github: {}
-  linter: {}
+  "ide-java":
+    javaHome: "C:\\SAPDevelop\\tools\\Java\\jdk1.8.0_152"
+  linter:
+    disabledProviders: [
+      "TSLint"
+    ]
+  "linter-eslint": {}
+  "linter-tslint":
+    rulesDirectory: "C:/SAPDevelop/projects/portal/cs-automator"
   "linter-ui-default":
-    panelHeight: 318
+    panelHeight: 93
   "platformio-ide-terminal":
     core:
       shell: "C:\\tools\\Git\\bin\\bash.exe"
@@ -33,6 +61,7 @@
       autoClose: true
       cursorBlink: false
       selectToCopy: false
+  "tree-view": {}
   welcome:
     showOnStartup: false
   whitespace:

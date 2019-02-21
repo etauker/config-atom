@@ -22,6 +22,12 @@
 
 # Remove empty lines:   ^\s*\r?\n\r?
 
+
+'.source.ts':
+  'console.log':
+    'prefix': 'log'
+    'body': 'console.log(${1:data});$2'
+
 '.source.gfm':
   'SPORTSONEIBSO':
     'prefix': 'sp'
